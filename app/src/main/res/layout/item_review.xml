@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="?attr/actionBarSize"
+    android:layout_marginLeft="?attr/actionBarSize"
+    android:layout_marginEnd="@dimen/spacing_smlarge"
+    android:layout_marginRight="@dimen/spacing_smlarge"
+    android:gravity="center_vertical"
+    android:minHeight="@dimen/spacing_mxlarge"
+    android:orientation="vertical"
+    android:layout_marginBottom="@dimen/spacing_middle">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <android.support.v7.widget.AppCompatRatingBar
+            android:id="@+id/rating_bar"
+            style="@style/Yellow.Small.AppCompatRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:numStars="5"
+            android:rating="4.0"
+            android:stepSize="1"
+            android:theme="@style/Yellow.Small.AppCompatRatingBar" />
+
+        <TextView
+            android:id="@+id/txt_client_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_middle"
+            android:layout_marginLeft="@dimen/spacing_middle"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="Adams Green"
+            android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_comment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/middle_lorem_ipsum"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+</LinearLayout>

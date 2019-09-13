@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nested_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:clipToPadding="false"
+        android:scrollbars="none"
+        android:scrollingCache="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.design.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/lyt_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="30dp">
+
+                        <com.mikhaellopez.circularimageview.CircularImageView
+                            android:id="@+id/image"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/photo_female_6"
+                            app:civ_border="true"
+                            app:civ_border_color="@color/blue_500"
+                            app:civ_border_width="2dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lyt_form"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="@dimen/spacing_large">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageButton
+                                android:layout_width="@dimen/spacing_mxlarge"
+                                android:layout_height="@dimen/spacing_mxlarge"
+                                android:layout_marginTop="@dimen/spacing_mlarge"
+                                android:background="@android:color/transparent"
+                                android:tint="@color/grey_60"
+                                app:srcCompat="@drawable/ic_list" />
+
+                            <View
+                                android:layout_width="@dimen/spacing_large"
+                                android:layout_height="match_parent" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:background="@drawable/txt_area_grey">
+
+                                <android.support.v7.widget.AppCompatButton
+                                    android:id="@+id/single_choice_dialog"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="?attr/selectableItemBackground"
+                                    android:gravity="left|center_vertical"
+                                    android:minHeight="?attr/actionBarSize"
+                                    android:onClick="clickAction"
+                                    android:paddingLeft="@dimen/spacing_large"
+                                    android:paddingRight="@dimen/spacing_large"
+                                    android:text="Category*"
+                                    android:textColor="@color/grey_40" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageButton
+                                android:layout_width="@dimen/spacing_mxlarge"
+                                android:layout_height="@dimen/spacing_mxlarge"
+                                android:layout_marginTop="@dimen/spacing_mlarge"
+                                android:background="@android:color/transparent"
+                                android:tint="@color/grey_60"
+                                app:srcCompat="@drawable/ic_store" />
+
+                            <View
+                                android:layout_width="@dimen/spacing_large"
+                                android:layout_height="match_parent" />
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColorHint="@color/grey_40">
+
+                                <android.support.v7.widget.AppCompatEditText
+                                    android:id="@+id/txt_store_name"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Store Name*"
+                                    android:inputType="textEmailAddress" />
+
+                            </android.support.design.widget.TextInputLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/spacing_large" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageButton
+                                android:layout_width="@dimen/spacing_mxlarge"
+                                android:layout_height="@dimen/spacing_mxlarge"
+                                android:layout_marginTop="@dimen/spacing_mlarge"
+                                android:background="@android:color/transparent"
+                                android:tint="@color/grey_60"
+                                app:srcCompat="@drawable/ic_phone" />
+
+                            <View
+                                android:layout_width="@dimen/spacing_large"
+                                android:layout_height="match_parent" />
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColorHint="@color/grey_40">
+
+                                <android.support.v7.widget.AppCompatEditText
+                                    android:id="@+id/txt_phone_number"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Phone Number*"
+                                    android:inputType="phone" />
+
+                            </android.support.design.widget.TextInputLayout>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/spacing_large" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageButton
+                                android:layout_width="@dimen/spacing_mxlarge"
+                                android:layout_height="@dimen/spacing_mxlarge"
+                                android:layout_marginTop="@dimen/spacing_mlarge"
+                                android:background="@android:color/transparent"
+                                android:tint="@color/grey_60"
+                                app:srcCompat="@drawable/ic_email" />
+
+                            <View
+                                android:layout_width="@dimen/spacing_large"
+                                android:layout_height="match_parent" />
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColorHint="@color/grey_40">
+
+                                <android.support.v7.widget.AppCompatEditText
+                                    android:id="@+id/txt_mail"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Email*"
+                                    android:inputType="textEmailAddress" />
+
+                            </android.support.design.widget.TextInputLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/spacing_large" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageButton
+                                android:id="@+id/imageButton2"
+                                android:layout_width="@dimen/spacing_mxlarge"
+                                android:layout_height="@dimen/spacing_mxlarge"
+                                android:layout_marginTop="@dimen/spacing_mlarge"
+                                android:background="@android:color/transparent"
+                                android:tint="@color/grey_60"
+                                app:srcCompat="@drawable/ic_location" />
+
+                            <View
+                                android:layout_width="@dimen/spacing_large"
+                                android:layout_height="match_parent" />
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColorHint="@color/grey_40">
+
+                                <android.support.v7.widget.AppCompatEditText
+                                    android:id="@+id/txt_address"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Address*" />
+
+                            </android.support.design.widget.TextInputLayout>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/spacing_large" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageButton
+                                android:layout_width="@dimen/spacing_mxlarge"
+                                android:layout_height="@dimen/spacing_mxlarge"
+                                android:layout_marginTop="@dimen/spacing_mlarge"
+                                android:background="@android:color/transparent"
+                                android:tint="@color/grey_60"
+                                app:srcCompat="@drawable/ic_lock" />
+
+                            <View
+                                android:layout_width="@dimen/spacing_large"
+                                android:layout_height="match_parent" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <android.support.design.widget.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textColorHint="@color/grey_40"
+                                    app:passwordToggleEnabled="true">
+
+                                    <android.support.v7.widget.AppCompatEditText
+                                        android:id="@+id/txt_password"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:hint="Password*"
+                                        android:inputType="textPassword" />
+
+                                </android.support.design.widget.TextInputLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/spacing_mxlarge" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="* "
+                                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                android:textColor="@color/colorAccent" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Required field"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/fab_picture"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/spacing_smlarge"
+                    android:clickable="true"
+                    android:tint="@android:color/white"
+                    app:backgroundTint="@color/blue_grey_800"
+                    app:fabSize="mini"
+                    app:layout_anchor="@id/lyt_image"
+                    app:layout_anchorGravity="center|bottom"
+                    app:rippleColor="@android:color/white"
+                    app:srcCompat="@drawable/ic_photo_camera" />
+
+            </android.support.design.widget.CoordinatorLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

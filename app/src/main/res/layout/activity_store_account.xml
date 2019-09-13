@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:contentInsetStartWithNavigation="0dp"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/pullToRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nested_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:scrollbars="none"
+        android:scrollingCache="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="?attr/colorPrimary"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/spacing_mlarge">
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:id="@+id/imageAcountStore"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:civ_border="true"
+                    app:civ_border_width="3dp" />
+
+                <TextView
+                    android:id="@+id/nameStoreAcount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:text="Adidas Store"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/addresseStore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_medium"
+                    android:text="Tunis City"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/blue_grey_50" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/spacing_mlarge"
+                android:paddingTop="@dimen/spacing_mlarge">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/prod_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1.5 K"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                        android:textColor="@color/grey_90" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_medium"
+                        android:text="Product"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                        android:textColor="@color/grey_60" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey_10" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/spacing_large"
+                android:paddingRight="@dimen/spacing_large"
+                android:text="All Products "
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColor="@color/grey_90"
+                android:textStyle="bold" />
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_large"
+                android:layout_marginRight="@dimen/spacing_large"
+                android:scrollbarSize="2dp">
+
+                <LinearLayout
+                    android:id="@+id/rootContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <android.support.design.widget.FloatingActionButton
+                        android:id="@+id/AddProductStore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="@dimen/spacing_large"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:text="PRIMARY"
+                        android:tint="@android:color/white"
+                        app:backgroundTint="@color/colorPrimary"
+                        app:srcCompat="@drawable/ic_add"
+                        tools:ignore="VectorDrawableCompat" />
+                </LinearLayout>
+
+            </HorizontalScrollView>
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+            </RelativeLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/spacing_large"
+                android:paddingRight="@dimen/spacing_large"
+                android:text="Last Product"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColor="@color/grey_90"
+                android:textStyle="bold" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerViewStore"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical"
+                android:scrollingCache="true" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_large" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+</LinearLayout>

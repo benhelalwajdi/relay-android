@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="shop_product_title">
+        <item>Fashion B07 Keara 933</item>
+        <item>Coup Hoodie Jacket</item>
+        <item>Gala Suede Jacket Flower</item>
+        <item>Qonnoq Checked Blouse</item>
+        <item>Java Seven Belladji 674</item>
+        <item>Kanvas Sneaker Shoes</item>
+        <item>Clarks Idamarie Faye Lea</item>
+        <item>Piero Rush Women</item>
+    </string-array>
+
+    <string-array name="shop_product_price">
+        <item>$ 48.90</item>
+        <item>$ 89.00</item>
+        <item>$ 66.80</item>
+        <item>$ 34.50</item>
+        <item>$ 44.90</item>
+        <item>$ 59.00</item>
+        <item>$ 78.20</item>
+        <item>$ 96.00</item>
+    </string-array>
+
+    <!--shopping category data-->
+    <integer-array name="shop_category_icon">
+        <item>@drawable/ic_accessibility</item>
+        <item>@drawable/ic_face</item>
+        <item>@drawable/ic_child_friendly</item>
+        <item>@drawable/ic_pool</item>
+        <item>@drawable/ic_confirmation_number</item>
+        <item>@drawable/ic_restaurant</item>
+    </integer-array>
+
+    <integer-array name="shop_category_bg">
+        <item>@drawable/image_19</item>
+        <item>@drawable/image_20</item>
+        <item>@drawable/image_21</item>
+        <item>@drawable/image_22</item>
+        <item>@drawable/image_23</item>
+        <item>@drawable/image_24</item>
+    </integer-array>
+
+    <string-array name="shop_category_title">
+        <item>Fashion</item>
+        <item>Beauty and Health</item>
+        <item>Babies and Kids</item>
+        <item>Sports and Hobby</item>
+        <item>Ticket and Voucher</item>
+        <item>Service and Food</item>
+    </string-array>
+
+    <string-array name="shop_category_brief">
+        <item>100k Items</item>
+        <item>655k Items</item>
+        <item>221k Items</item>
+        <item>85k Items</item>
+        <item>725k Items</item>
+
+        <item>932k Items</item>
+        <item>475k Items</item>
+        <item>362k Items</item>
+    </string-array>
+
+        <array name="autosize_text_sizes">
+            <item>10sp</item>
+            <item>12sp</item>
+            <item>20sp</item>
+            <item>40sp</item>
+            <item>100sp</item>
+        </array>
+
+</resources>

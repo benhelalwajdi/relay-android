@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/spacing_large">
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/user_picture"
+            android:layout_width="@dimen/spacing_xmlarge"
+            android:layout_height="@dimen/spacing_xmlarge"
+            android:src="@drawable/photo_female_7"
+            app:civ_border="false" />
+
+        <View
+            android:layout_width="@dimen/spacing_large"
+            android:layout_height="0dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_user_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="Ben Guiza Ahlem"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                android:textColor="@color/grey_90"
+                android:textStyle="bold" />
+
+            <android.support.v7.widget.AppCompatRatingBar
+                android:id="@+id/rating_bar"
+                android:isIndicator="false"
+                style="?android:attr/ratingBarStyleIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:numStars="5"
+                android:rating="3"
+                android:stepSize="1"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/spacing_small"
+                android:theme="@style/Yellow.Small.AppCompatRatingBar.White" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="@dimen/spacing_large">
+
+        <EditText
+            android:id="@+id/txt_comment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/grey_3"
+            android:gravity="top"
+            android:hint="Your comment ..."
+            android:lines="4"
+            android:padding="@dimen/spacing_middle" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/bt_cancel"
+            style="@style/Button.Accent.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="CANCEL" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/bt_submit"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="POST" />
+
+    </LinearLayout>
+
+</LinearLayout>

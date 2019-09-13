@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    package="app.com.relay">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:hardwareAccelerated="true"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_round"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".activity.MainActivity" />
+        <activity android:name=".activity.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <activity android:name=".activity.AddProductActivity" />
+        <activity android:name=".activity.StoreAccountActivity" />
+        <activity android:name=".activity.StoreListActivity" />
+        <activity android:name=".activity.RegisterActivity" />
+        <activity android:name=".activity.HomeActivity" />
+        <activity android:name=".activity.StoreCategoriesActivity" />
+        <activity android:name=".activity.ProductDetailsActivity" />
+        <activity android:name=".activity.CartActivity" />
+        <activity android:name=".activity.CheckoutActivity" />
+        <activity android:name=".activity.StoreProductActivity" />
+        <activity android:name=".activity.EditProductActivity" />
+        <activity android:name=".activity.OrderActivity"/>
+        <activity android:name=".activity.EditProfile"></activity>
+        <activity android:name=".activity.DelivererHomeActivity" />
+        <activity android:name=".activity.ProductListActivity"></activity>
+
+        <activity android:name=".activity.DelivererHomePageActivity">
+
+        </activity>
+        <!-- Add Google Map Library -->
+        <uses-library android:name="com.google.android.maps" />
+
+        <!-- Google API Key -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyB7pCCGEP_uzGIXs5bGKHaYJ9cZt4nv9V0" />
+
+
+        <service android:name=".service.NotificationService"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="your.app.domain.NotificationService" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+
+        
+    </application>
+
+
+</manifest>

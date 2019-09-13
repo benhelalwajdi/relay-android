@@ -1,0 +1,204 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_10"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nested_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:scrollingCache="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="blocksDescendants"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/top_lyt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/world_map"
+                    android:tint="@color/overlay_light_30" />
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                    app:contentInsetStartWithNavigation="0dp"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                    app:subtitle="welcome to Relay"
+                    app:subtitleTextAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                    app:subtitleTextColor="@color/grey_10"
+                    app:title="Hi, Ahlem Ben Guiza" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/spacing_middle" />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_middle"
+                android:layout_marginRight="@dimen/spacing_middle"
+                app:cardCornerRadius="3dp"
+                app:cardElevation="2dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/pager"
+                        android:layout_width="match_parent"
+                        android:layout_height="220dp"
+                        android:background="@color/grey_20"
+                        android:foreground="@color/overlay_dark_10" />
+
+                    <LinearLayout
+                        android:layout_margin="@dimen/spacing_medium"
+                        android:id="@+id/layout_dots"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:orientation="horizontal" />
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/spacing_large"
+                android:paddingRight="@dimen/spacing_large"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Top Rated"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Title" />
+
+                <Button
+                    android:id="@+id/btn_more_top_rated"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:minWidth="0dp"
+                    android:onClick="clickAction"
+                    android:text="MORE"
+                    android:textColor="@color/grey_60" />
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerViewTopRated"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/spacing_medium"
+                android:scrollbars="vertical"
+                android:scrollingCache="true"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/spacing_large"
+                android:paddingRight="@dimen/spacing_large">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Recommended"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Title" />
+
+                <Button
+                    android:id="@+id/btn_more_stores"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:minWidth="0dp"
+                    android:onClick="clickAction"
+                    android:text="MORE"
+                    android:textColor="@color/grey_60" />
+
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerViewRecommended"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/spacing_medium"
+                android:layout_marginEnd="@dimen/spacing_medium"
+                android:padding="@dimen/spacing_medium"
+                android:scrollbars="horizontal"
+                android:scrollingCache="true"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/spacing_large"
+                android:paddingRight="@dimen/spacing_large">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="New Releases"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Title" />
+
+                <Button
+                    android:id="@+id/btn_more_new_releases"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:minWidth="0dp"
+                    android:onClick="clickAction"
+                    android:text="MORE"
+                    android:textColor="@color/grey_60" />
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/spacing_medium"
+                android:scrollbars="vertical"
+                android:scrollingCache="true"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</LinearLayout>

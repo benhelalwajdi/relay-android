@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/spacing_smlarge"
+    android:layout_marginLeft="?attr/actionBarSize"
+    android:layout_marginRight="@dimen/spacing_smlarge"
+    android:layout_marginStart="?attr/actionBarSize"
+    android:gravity="center_vertical"
+    android:minHeight="@dimen/spacing_mxlarge"
+    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+        <android.support.v7.widget.AppCompatRatingBar
+            android:id="@+id/rating"
+            style="@style/Yellow.Small.AppCompatRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:numStars="5"
+            android:rating="4.0"
+            android:stepSize="1"
+            android:theme="@style/Yellow.Small.AppCompatRatingBar" />
+        <TextView
+            android:id="@+id/comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_middle"
+            android:layout_marginStart="@dimen/spacing_middle"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="Adams Green"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+</LinearLayout>
